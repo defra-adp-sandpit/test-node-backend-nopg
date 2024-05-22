@@ -1,0 +1,3 @@
+services:
+  test-node-backend-nopg:
+    command: npm run start:debug

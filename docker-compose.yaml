@@ -1,0 +1,13 @@
+services:
+  test-node-backend-nopg:
+    build:
+      context: .
+      target: production
+    image: test-node-backend-nopg
+    container_name: test-node-backend-nopg
+    depends_on:
+      - test-node-backend-nopg-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: test-node-backend-nopg-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+

@@ -1,0 +1,6 @@
+services:
+  test-node-backend-nopg:
+    command: >
+      sh -c "npm run test:watch"
+    volumes:
+      - ./.git:/home/node/.git

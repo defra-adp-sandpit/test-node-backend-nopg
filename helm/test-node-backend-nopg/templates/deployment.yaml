@@ -1,0 +1,8 @@
+{{- include "adp-helm-library.deployment" (list . "test-node-backend-nopg.deployment") -}}
+{{- define "test-node-backend-nopg.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "adp-helm-library.container" (list . "test-node-backend-nopg.container") }}
+{{- end -}}
